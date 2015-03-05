@@ -13,6 +13,14 @@ cache can be saved to and loaded from a file (using `c.Items()` to retrieve the
 items map to serialize, and `NewFrom()` to create a cache from a deserialized
 one) to recover from downtime quickly. (See the docs for `NewFrom()` for caveats.)
 
+### Updates
+
+add the limitation of max capacity on the total memory consumption.
+
+- first version: If the cache is full, stop to set the new key.
+
+- second version: If the cache is full, run some replacement algorithm.
+
 ### Installation
 
 `go get github.com/pmylund/go-cache`
